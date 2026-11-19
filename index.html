@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore department events, workshops, outreach programmes and achievements." />
+  <title>Department Activity Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span><span>DEPARTMENT<span class="brand-light"> / SHOWCASE</span></span></a>
+    <nav><a href="#activities">Activities</a><a href="#highlights">Highlights</a><a href="#gallery">Gallery</a></nav>
+    <a class="top-cta" href="#activities">Explore work <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> LEARNING · INNOVATION · IMPACT</div>
+        <p class="hero-kicker">A YEAR OF IDEAS IN ACTION</p>
+        <h1>Learning beyond<br><em>the classroom.</em></h1>
+        <p class="hero-lede">A living showcase of our activities, collaborations and experiences — where learning becomes action and ideas create impact.</p>
+        <div class="hero-actions"><a class="btn-primary" href="#activities">Explore activities <span>↘</span></a><a class="text-link" href="#highlights">Discover our impact <span>→</span></a></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract technology illustration">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+        <div class="art-core"><span>IDEAS</span><strong>→</strong><span>IMPACT</span></div>
+        <div class="art-tag tag-top">CREATIVITY / 01</div><div class="art-tag tag-bottom">CONNECTED BY CURIOSITY</div>
+        <div class="spark spark-a">✳</div><div class="spark spark-b">✦</div><div class="spark spark-c">✧</div>
+      </div>
+      <div class="hero-foot"><span>ACTIVITY ARCHIVE</span><span>SCROLL TO EXPLORE ↓</span><span>01 — 04</span></div>
+    </section>
+
+    <section class="intro section-wrap" id="highlights">
+      <div><p class="section-label">01 / THE BIG PICTURE</p><h2>Small moments.<br><em>Meaningful outcomes.</em></h2></div>
+      <div class="intro-right"><p>From hands-on workshops to community engagement, every activity is an opportunity to learn, collaborate and make a difference.</p><p class="muted">The figures and activity cards below are populated from <code>data/activities.json</code>. Replace the sample entries with the verified records from your workbook.</p></div>
+    </section>
+
+    <section class="stats section-wrap" aria-label="Activity statistics">
+      <div class="stat"><span class="stat-number" id="stat-total">—</span><span class="stat-label">ACTIVITIES LISTED</span></div>
+      <div class="stat"><span class="stat-number" id="stat-categories">—</span><span class="stat-label">CATEGORIES</span></div>
+      <div class="stat"><span class="stat-number" id="stat-years">—</span><span class="stat-label">YEARS REPRESENTED</span></div>
+      <div class="stat stat-note"><span class="stat-symbol">✳</span><span class="stat-label">ONE COMMUNITY.<br>MANY POSSIBILITIES.</span></div>
+    </section>
+
+    <section class="activities-section" id="activities">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="section-label">02 / EXPLORE THE ARCHIVE</p><h2>Activities & <em>experiences</em></h2></div><p class="heading-note">Browse the work, meet the ideas<br>and see what we have been doing.</p></div>
+        <div class="toolbar"><div class="filters" id="filters"><button class="filter active" data-filter="All">All activities</button></div><label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Search activities..." aria-label="Search activities"></label></div>
+        <div class="results-line"><span id="result-count">Loading activities…</span><span>SELECT A CARD TO VIEW DETAILS ↗</span></div>
+        <div class="activity-grid" id="activity-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>No activities match your search. Try another keyword or category.</div>
+      </div>
+    </section>
+
+    <section class="gallery-section section-wrap" id="gallery">
+      <div class="section-heading"><div><p class="section-label">03 / MOMENTS THAT MATTER</p><h2>Stories in <em>pictures</em></h2></div><p class="heading-note">A glimpse of the people, places<br>and energy behind the activities.</p></div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <section class="closing"><div class="closing-mark">✳</div><p class="section-label">OUR JOURNEY CONTINUES</p><h2>Curiosity moves us.<br><em>Purpose connects us.</em></h2><a href="#home" class="text-link">Back to top ↑</a></section>
+  </main>
+
+  <footer><span>© <span id="year"></span> DEPARTMENT ACTIVITY SHOWCASE</span><span>BUILT TO CELEBRATE LEARNING & IMPACT</span></footer>
+
+  <dialog id="activity-dialog"><button class="dialog-close" aria-label="Close details">×</button><div id="dialog-content"></div></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
